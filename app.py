@@ -22,7 +22,7 @@ def add_header(r):
 
 @app.route('/')
 def main():     
-   return render_template('index.html')
+   return render_template('base.html')
 
 @app.route('/', methods=['POST'])
 def predict():
@@ -32,7 +32,7 @@ def predict():
       file_ext = os.path.splitext(filename)[1]
       if file_ext not in app.config['UPLOAD_EXTENSIONS']:
          flash("Invalid input.")
-         return render_template('index.html')
+         return render_template('base.html')
          # return "Invalid input", 400
 
       file_path = os.path.join(app.config['UPLOAD_PATH'], 'query.jpg')
@@ -47,7 +47,7 @@ def predict():
       return render_template('result.html')
    else:
       flash("Invalid input.")
-      return render_template('index.html')
+      return render_template('base.html')
 
    # return render_template('result.html')
 
@@ -55,7 +55,7 @@ def predict():
 def tryagain():
    if request.method == 'POST':
         return redirect(url_for('index'))
-   return render_template('index.html')
+   return render_template('base.html')
 
 @app.route('/static/images/<filename>')
 def download_file(filename):
