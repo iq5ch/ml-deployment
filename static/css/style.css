@@ -1,0 +1,178 @@
+body {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Style the header with a grey background and some padding */
+.header {
+  overflow: hidden;
+  background-color: #eeeeee;
+  padding: 20px 10px;
+}
+
+/* Style the header links */
+.header a {
+  float: none;
+  display: block;
+  margin: 0 auto 0 auto;
+  /* color: black; */
+  color: #466273;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+.header a.logo {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Change the background color on mouse-over */
+.header a:hover {
+  background-color: #ddd;
+  color: #466273;
+}
+
+/* Style the active/current link*/
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    margin: 0 auto 0 auto;
+    text-align: center;
+  }
+  .header-right {
+    float: none;
+  }
+  .dropzone-desc {
+    width: 80%;
+  }
+}
+
+.btn {
+  width: 100%;
+}
+
+/**
+ *
+ * Style.css
+ *
+ */
+
+.container {
+  padding: 30px 200px;
+}
+.box {
+  position: relative;
+  background: #ffffff;
+  width: 100%;
+}
+.box-header {
+  color: #444;
+  display: block;
+  padding: 10px;
+  position: relative;
+  /* border-bottom: 1px solid #f4f4f4; */
+  margin-bottom: 10px;
+}
+.box-tools {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+.dropzone-wrapper {
+  border: 2px dashed #91b0b3;
+  border-radius: 5px;
+  color: #92b0b3;
+  position: relative;
+  height: 150px;
+  /* width: 60%; */
+  margin: 1% auto 0 auto;
+}
+.dropzone-desc {
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 40%;
+  top: 50px;
+  font-size: 16px;
+}
+.dropzone,
+.dropzone:focus {
+  position: absolute;
+  outline: none !important;
+  width: 100%;
+  height: 150px;
+  cursor: pointer;
+  opacity: 0;
+}
+.dropzone-wrapper:hover,
+.dropzone-wrapper.dragover {
+  background: #ecf0f5;
+}
+.form-group {
+  width: 70%;
+  margin: 0 auto 0 auto;
+}
+.preview-zone {
+  text-align: center;
+}
+.preview-zone .box {
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+/*----*/
+
+.result-display {
+  width: fit-content;
+  height: 420px;
+  text-align: center;
+  border: 10px solid #eeeeee;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.result-box {
+  width: 100%;
+  text-align: center;
+  margin: 3% 0 0 0;
+}
+
+.btn-box {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-submit-div {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  margin: 3% auto;
+}
+
+.image-result {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
